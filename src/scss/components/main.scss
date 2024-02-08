@@ -36,13 +36,9 @@
 }
 
 .intro {
-	
 	padding-bottom: 65px;
-	
 	position: relative;
-
 	margin-bottom: 80px;
-	
 	@media (min-width: $xl) {
 		margin-bottom: 120px;
 	}
@@ -55,7 +51,7 @@
 	}
 	
 	&__back {
-		background: url(../img/intro-bg.png) no-repeat center 0;
+		background: url(../img/intro-bg.png) no-repeat center 0/cover;
 		background-size: cover;
 		position: absolute;
 		left: 0;

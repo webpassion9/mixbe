@@ -1436,7 +1436,7 @@ Site styles
 }
 
 .no-webp .intro__back {
-  background: url(../img/intro-bg.png) no-repeat center 0; }
+  background: url(../img/intro-bg.png) no-repeat center 0/cover; }
 
 .intro__back {
   background-size: cover;
@@ -4832,7 +4832,7 @@ Site styles
   }
 }
 
-.webp .intro__back { background: url(../img/intro-bg.webp) no-repeat center 0; }
+.webp .intro__back { background: url(../img/intro-bg.webp) no-repeat center 0/cover; }
 
 .webp .section-info { background: var(--color-white) url(../img/bg-texture-dots.webp) no-repeat center bottom; }
 

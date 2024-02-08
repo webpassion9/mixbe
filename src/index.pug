@@ -1,0 +1,473 @@
+include html/mixins
+
+doctype html
+block head
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no")
+		meta(name="format-detection" content="telephone=no")
+
+		link(rel="stylesheet", href="css/style.min.css")
+
+		title Title
+
+	body
+		.wrapper
+
+			header.header
+				.container.header__container
+					div
+						img(src="img/logo.svg", width="95" height="27" alt="")
+					ul.menu.elem-align-right.is-lg-visible
+						li.menu__item
+							a(href="#parser").menu__item-link Парсер
+						li.menu__item
+							a(href="#objects").menu__item-link Объекты
+						li.menu__item
+							a(href="#applications").menu__item-link Заявки
+						li.menu__item
+							a(href="#plans").menu__item-link Цены
+						li.menu__item
+							a(href="#contacts").menu__item-link Контакты
+					.is-lg-visible
+						a(href="#").btn.btn-auth Войти/Регистрация
+					a(href="#").btn.btn-menu.elem-align-right.is-lg-hidden
+						span
+					.mobile-menu
+						ul.menu
+							li.menu__item
+								a(href="#parser").menu__item-link Парсер
+							li.menu__item
+								a(href="#objects").menu__item-link Объекты
+							li.menu__item
+								a(href="#applications").menu__item-link Заявки
+							li.menu__item
+								a(href="#plans").menu__item-link Цены
+							li.menu__item
+								a(href="#contacts").menu__item-link Контакты
+						a(href="#").btn.btn-auth Войти/Регистрация
+						
+
+			.intro
+				.intro__back
+				.container.intro__container
+					.row.intro__row
+						.col-12.col-lg-5.intro__main
+							.heading 
+								span MIXBE CRM
+								|  - экосистема недвижимости
+							.heading-large смотри создавай отправляй
+							.intro__img.is-lg-hidden
+								img(src="img/main-img.png", srcset="img/main-img.png 2x" width="707" height="709" alt="")
+								.intro__img-bg-circle
+							ul.intro-list
+								li
+									+sprite("icon-check-elem")
+									| Исследуй весь рынок недвижимости
+								li
+									+sprite("icon-check-elem")
+									| Создавай объявления и выгружай в рекламу
+								li
+									+sprite("icon-check-elem")
+									| Отправляй подборки клиентам
+							.intro-btn
+								a(href="#").btn.btn-base Регистрация
+						.col-12.col-lg-7.intro__img.is-lg-visible
+							img(src="img/main-img.png", srcset="img/main-img.png 2x" width="707" height="709" alt="")
+							.intro__img-bg-circle
+			
+			.section-info.section-info--margin-bottom#parser
+				.container
+					.row.section-info__row
+						.col-12.col-md-7.col-lg-6
+							.heading-medium Парсер недвижимости
+							ul.info-list.row
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-business-card")
+									| Все объявления в одном месте
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-bar-chart")
+									| Сортировка 
+									br
+									| по статусам
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-location")
+									| Группировка 
+									br
+									| по адресу
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-contact")
+									| Сортировка пользователей
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-compass")
+									| Поиск 
+									br
+									| по локации
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-chat")
+									| Заметки 
+									| по&nbsp;объявлениям
+						.col-12.col-md-5.col-lg-6.section-info__img
+							img(src="img/preview-parser.png", srcset="img/preview-parser@2x.png 2x" alt="").is-lg-visible
+							img(src="img/preview-parser_mob.png", alt="").is-lg-hidden
+			
+			.section-info#objects
+				.container
+					.row.section-info__row.info-row-reverse
+						.col-12.col-md-7.col-lg-6
+							.heading-medium Собственная База объектов
+							ul.info-list.row
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon.info-list__item-icon--mod-red
+										+sprite("icon-add-file")
+									| Быстрое добавление объекта
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon.info-list__item-icon--mod-red
+										+sprite("icon-upload-file")
+									| Выгрузка объектов на площадки
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon.info-list__item-icon--mod-red
+										+sprite("icon-pagers")
+									| Счетчики выгрузки
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon.info-list__item-icon--mod-red
+										+sprite("icon-waves")
+									| Свой водяной знак на фотографиях
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon.info-list__item-icon--mod-red
+										+sprite("icon-duplicate")
+									| Дублирование объекта
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon.info-list__item-icon--mod-red
+										+sprite("icon-file-search")
+									| Сравнение с парсером
+						.col-12.col-md-5.col-lg-6.section-info__img
+							img(src="img/preview-base.png", srcset="img/preview-base@2x.png 2x" alt="").is-lg-visible
+							img(src="img/preview-base_mob.png", alt="").is-lg-hidden
+			
+			.container
+				.promo
+					.promo__back
+					.promo__container
+						.promo__heading Вы уже подключены к другой CRM?
+						.promo__subheading Мы поможем перенести данные!
+						.promo__btns-wrap
+							.promo__btns
+								a(href="#").btn.btn-base Регистрация
+								a(href="#").btn.btn-outline.btn-outline--theme-white Пробный парсер
+								img(src="img/icon-arrow-promo.svg", width="45" height="62" alt="").promo__btns-arrow
+
+			.section-info#applications
+				.container
+					.row.section-info__row
+						.col-12.col-md-7.col-lg-6
+							.heading-medium Заявки
+								br
+								|  клиентов
+							ul.info-list.row
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-add-file")
+									| Сохранение поиска под клиента
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-upload-file")
+									| Подборка из “Моя база”
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-pagers")
+									| Подборкаиз “Парсер”
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-waves")
+									| Сортировка объектов в Подборке
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-duplicate")
+									| Счетчик  объектов по Подборке
+								li.info-list__item.col-6.col-xl-4
+									.info-list__item-icon
+										+sprite("icon-file-search")
+									| Быстрый переходв мессенджеры
+						.col-12.col-md-5.col-lg-6.section-info__img
+							img(src="img/preview-applications.png", srcset="img/preview-applications@2x.png 2x" alt="").is-lg-visible
+							img(src="img/preview-applications_mob.png", alt="").is-lg-hidden
+			
+			
+			.container
+				.compatibility
+					.compatibility__back
+					.compatibility__container
+						.row
+							.col-12.col-lg-6.compatibility__main
+								.compatibility__heading Полная мобильная совместимость, CRM для недвижимости доступна с любого устройства!
+								div
+									a(href="#").btn.btn-base Регистрация
+							.col-12.col-lg-6.compatibility__img
+								img(src="img/iPhone-15-Pro 1.png", alt="").is-lg-visible
+								img(src="img/iPhone-15-Pro_mob.png", alt="").is-lg-hidden
+			
+			.container#plans.plans
+				.heading-base Тарифы Миксби:
+				.swiper.plans-items
+					.plans-wrapper.swiper-wrapper
+						.swiper-slide
+							.plan
+								.plan__price
+									div
+										.plan__price-heading
+											span 1 000 
+											|  ₽/мес.
+										div за пользователя
+									.plan__price-icon
+										+sprite("icon-add-user")
+								.plan__section
+									.plan__heading Парсер:
+									ul.plan__list
+										li
+											+sprite("icon-check")
+											| Просмотр контактов
+										li
+											+sprite("icon-check")
+											| Сортировка объявлений 
+										li
+											+sprite("icon-check")
+											| Сортировка пользователей 
+										li
+											+sprite("icon-check")
+											| Заметки к объявлениям
+										li
+											+sprite("icon-check")
+											| Предложения по адресу
+								.plan__section
+									.plan__heading Моя База:
+									ul.plan__list
+										li
+											+sprite("icon-cross")
+											| Добавление объекта
+										li
+											+sprite("icon-cross")
+											| Выгрузка объектов
+										li
+											+sprite("icon-cross")
+											| Счетчики выгрузки
+										li
+											+sprite("icon-cross")
+											| Дублирование объекта
+										li
+											+sprite("icon-cross")
+											| Водяной знак
+								.plan__section
+									.plan__heading Заявки:
+									ul.plan__list
+										li
+											+sprite("icon-cross")
+											| Подборка из “Моя база”
+										li
+											+sprite("icon-cross")
+											| Подборка из “Парсер”
+										li
+											+sprite("icon-cross")
+											| Сортировка объектов
+										li
+											+sprite("icon-cross")
+											| Счетчик объектов
+										li
+											+sprite("icon-cross")
+											| Переход в мессенежеры
+								div
+									a(href="#").btn.btn-base.btn--fullwidth Попробовать
+						.swiper-slide
+							.plan.plan--selected
+								.plan__price
+									div
+										.plan__price-heading
+											span 5 000 
+											|  ₽/мес.
+										div за пользователя
+									.plan__price-icon
+										+sprite("icon-add-user")
+								.plan__section
+									.plan__heading Парсер:
+									ul.plan__list
+										li
+											+sprite("icon-check")
+											| Просмотр контактов
+										li
+											+sprite("icon-check")
+											| Сортировка объявлений 
+										li
+											+sprite("icon-check")
+											| Сортировка пользователей 
+										li
+											+sprite("icon-check")
+											| Заметки к объявлениям
+										li
+											+sprite("icon-check")
+											| Предложения по адресу
+								.plan__section
+									.plan__heading Моя База:
+									ul.plan__list
+										li
+											+sprite("icon-check")
+											| Добавление объекта
+										li
+											+sprite("icon-check")
+											| Выгрузка объектов
+										li
+											+sprite("icon-check")
+											| Счетчики выгрузки
+										li
+											+sprite("icon-check")
+											| Дублирование объекта
+										li
+											+sprite("icon-check")
+											| Водяной знак
+								.plan__section
+									.plan__heading Заявки:
+									ul.plan__list
+										li
+											+sprite("icon-check")
+											| Подборка из “Моя база”
+										li
+											+sprite("icon-check")
+											| Подборка из “Парсер”
+										li
+											+sprite("icon-check")
+											| Сортировка объектов
+										li
+											+sprite("icon-check")
+											| Счетчик объектов
+										li
+											+sprite("icon-check")
+											| Переход в мессенежеры
+								.plan__section
+									.plan__heading Собственники:
+										img(src="img/icon-fire.svg" width="20" height="20" alt="")
+										img(src="img/icon-fire.svg" width="20" height="20" alt="")
+										img(src="img/icon-fire.svg" width="20" height="20" alt="")
+									ul.plan__list
+										li
+											+sprite("icon-check")
+											| Просмотр контактов
+										li
+											+sprite("icon-check")
+											| Актуальные объявления
+										li
+											+sprite("icon-check")
+											| Трекинг актуализации
+								div
+									a(href="#").btn.btn-base.btn--fullwidth Попробовать
+						.swiper-slide
+							.plan
+								.plan__price
+									div
+										.plan__price-heading
+											span 2 000 
+											|  ₽/мес.
+										div за пользователя
+									.plan__price-icon
+										+sprite("icon-add-user")
+								.plan__section
+									.plan__heading Парсер:
+									ul.plan__list
+										li
+											+sprite("icon-check")
+											| Просмотр контактов
+										li
+											+sprite("icon-check")
+											| Сортировка объявлений 
+										li
+											+sprite("icon-check")
+											| Сортировка пользователей 
+										li
+											+sprite("icon-check")
+											| Заметки к объявлениям
+										li
+											+sprite("icon-check")
+											| Предложения по адресу
+								.plan__section
+									.plan__heading Моя База:
+									ul.plan__list
+										li
+											+sprite("icon-check")
+											| Добавление объекта
+										li
+											+sprite("icon-check")
+											| Выгрузка объектов
+										li
+											+sprite("icon-check")
+											| Счетчики выгрузки
+										li
+											+sprite("icon-check")
+											| Дублирование объекта
+										li
+											+sprite("icon-check")
+											| Водяной знак
+								.plan__section
+									.plan__heading Заявки:
+									ul.plan__list
+										li
+											+sprite("icon-check")
+											| Подборка из “Моя база”
+										li
+											+sprite("icon-check")
+											| Подборка из “Парсер”
+										li
+											+sprite("icon-check")
+											| Сортировка объектов
+										li
+											+sprite("icon-check")
+											| Счетчик объектов
+										li
+											+sprite("icon-check")
+											| Переход в мессенежеры
+								div
+									a(href="#").btn.btn-base.btn--fullwidth Попробовать
+					.plans-pagination
+			.container.video-section
+				.video
+					.heading-normal Видеопрезентация
+					.video__main
+						iframe(src="https://www.youtube.com/embed/Uh9643c2P6k?si=bRZghYa5-WtiBUu-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen)
+				.video-btns-wrap
+					.video-btns
+						a(href="#").btn.btn-base Регистрация
+						a(href="#").btn.btn-outline.btn-outline--theme-red Пробный парсер
+			
+			footer.footer#contacts
+				.container
+					.row.footer__row
+						.col-12.col-lg-4.footer__col-logo
+							.footer__logo
+								img(src="img/logo.svg", width="95" height="27" alt="")
+								span CRM
+							.footer__logo-text Миксби црм недвижимость © 						
+						.col-12.col-lg-4.footer__col-links
+							ul.footer__links
+								li
+									a(href="#") Пользовательское соглашение
+								li
+									a(href="#") Политика конфиденциальности
+						.col-12.col-lg-4.footer__col-contacts
+							div
+								a(href="tel:+7 (999) 999 99 99").contact-item 
+									| +7 (999) 999 99 99
+									.contact-item__icon
+										+sprite("icon-tel")
+							div
+								a(href="#").contact-item
+									| username
+									.contact-item__icon
+										img(src="img/icon-telegram.svg", width="36" height="36" alt="")
+							div
+								a(href="mailto:info@mixbe.ru").contact-email info@mixbe.ru
+
+		script(src="js/app.min.js")

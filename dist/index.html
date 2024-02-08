@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/style.min.css?_v=20240208203111">
+		<title>Title</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container header__container">
+					<div>
+						<img src="img/logo.svg" width="95" height="27" alt="">
+					</div>
+					<ul class="menu elem-align-right is-lg-visible">
+						<li class="menu__item">
+							<a class="menu__item-link" href="#parser">Парсер</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="#objects">Объекты</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="#applications">Заявки</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="#plans">Цены</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="#contacts">Контакты</a>
+						</li>
+					</ul>
+					<div class="is-lg-visible">
+						<a class="btn btn-auth" href="#">Войти/Регистрация</a>
+					</div>
+					<a class="btn btn-menu elem-align-right is-lg-hidden" href="#">
+						<span></span>
+					</a>
+					<div class="mobile-menu">
+						<ul class="menu">
+							<li class="menu__item">
+								<a class="menu__item-link" href="#parser">Парсер</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#objects">Объекты</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#applications">Заявки</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#plans">Цены</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#contacts">Контакты</a>
+							</li>
+						</ul>
+						<a class="btn btn-auth" href="#">Войти/Регистрация</a>
+					</div>
+				</div>
+			</header>
+			<div class="intro">
+				<div class="intro__back"></div>
+				<div class="container intro__container">
+					<div class="row intro__row">
+						<div class="col-12 col-lg-5 intro__main">
+							<div class="heading"> 
+								<span>MIXBE CRM</span> - экосистема недвижимости
+							</div>
+							<div class="heading-large">смотри создавай отправляй</div>
+							<div class="intro__img is-lg-hidden">
+								<picture><source srcset="img/main-img.webp, img/main-img.webp 2x" type="image/webp"><img src="img/main-img.png" srcset="img/main-img.png 2x" width="707" height="709" alt=""></picture>
+								<div class="intro__img-bg-circle"></div>
+							</div>
+							<ul class="intro-list">
+								<li>
+									<svg class="icon-check-elem">
+										<use xlink:href="img/icons/icons.svg#icon-check-elem"></use>
+									</svg>Исследуй весь рынок недвижимости
+								</li>
+								<li>
+									<svg class="icon-check-elem">
+										<use xlink:href="img/icons/icons.svg#icon-check-elem"></use>
+									</svg>Создавай объявления и выгружай в рекламу
+								</li>
+								<li>
+									<svg class="icon-check-elem">
+										<use xlink:href="img/icons/icons.svg#icon-check-elem"></use>
+									</svg>Отправляй подборки клиентам
+								</li>
+							</ul>
+							<div class="intro-btn">
+								<a class="btn btn-base" href="#">Регистрация</a>
+							</div>
+						</div>
+						<div class="col-12 col-lg-7 intro__img is-lg-visible">
+							<picture><source srcset="img/main-img.webp, img/main-img.webp 2x" type="image/webp"><img src="img/main-img.png" srcset="img/main-img.png 2x" width="707" height="709" alt=""></picture>
+							<div class="intro__img-bg-circle"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-info section-info--margin-bottom" id="parser">
+				<div class="container">
+					<div class="row section-info__row">
+						<div class="col-12 col-md-7 col-lg-6">
+							<div class="heading-medium">Парсер недвижимости</div>
+							<ul class="info-list row">
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-business-card">
+											<use xlink:href="img/icons/icons.svg#icon-business-card"></use>
+										</svg>
+									</div>Все объявления в одном месте
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-bar-chart">
+											<use xlink:href="img/icons/icons.svg#icon-bar-chart"></use>
+										</svg>
+									</div>Сортировка <br>по статусам
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-location">
+											<use xlink:href="img/icons/icons.svg#icon-location"></use>
+										</svg>
+									</div>Группировка <br>по адресу
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-contact">
+											<use xlink:href="img/icons/icons.svg#icon-contact"></use>
+										</svg>
+									</div>Сортировка пользователей
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-compass">
+											<use xlink:href="img/icons/icons.svg#icon-compass"></use>
+										</svg>
+									</div>Поиск <br>по локации
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-chat">
+											<use xlink:href="img/icons/icons.svg#icon-chat"></use>
+										</svg>
+									</div>Заметки 
+									по&nbsp;объявлениям
+								</li>
+							</ul>
+						</div>
+						<div class="col-12 col-md-5 col-lg-6 section-info__img">
+							<picture><source srcset="img/preview-parser.webp, img/preview-parser@2x.webp 2x" type="image/webp"><img class="is-lg-visible" src="img/preview-parser.png" srcset="img/preview-parser@2x.png 2x" alt=""></picture>
+							<picture><source srcset="img/preview-parser_mob.webp" type="image/webp"><img class="is-lg-hidden" src="img/preview-parser_mob.png" alt=""></picture>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-info" id="objects">
+				<div class="container">
+					<div class="row section-info__row info-row-reverse">
+						<div class="col-12 col-md-7 col-lg-6">
+							<div class="heading-medium">Собственная База объектов</div>
+							<ul class="info-list row">
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon info-list__item-icon--mod-red">
+										<svg class="icon-add-file">
+											<use xlink:href="img/icons/icons.svg#icon-add-file"></use>
+										</svg>
+									</div>Быстрое добавление объекта
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon info-list__item-icon--mod-red">
+										<svg class="icon-upload-file">
+											<use xlink:href="img/icons/icons.svg#icon-upload-file"></use>
+										</svg>
+									</div>Выгрузка объектов на площадки
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon info-list__item-icon--mod-red">
+										<svg class="icon-pagers">
+											<use xlink:href="img/icons/icons.svg#icon-pagers"></use>
+										</svg>
+									</div>Счетчики выгрузки
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon info-list__item-icon--mod-red">
+										<svg class="icon-waves">
+											<use xlink:href="img/icons/icons.svg#icon-waves"></use>
+										</svg>
+									</div>Свой водяной знак на фотографиях
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon info-list__item-icon--mod-red">
+										<svg class="icon-duplicate">
+											<use xlink:href="img/icons/icons.svg#icon-duplicate"></use>
+										</svg>
+									</div>Дублирование объекта
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon info-list__item-icon--mod-red">
+										<svg class="icon-file-search">
+											<use xlink:href="img/icons/icons.svg#icon-file-search"></use>
+										</svg>
+									</div>Сравнение с парсером
+								</li>
+							</ul>
+						</div>
+						<div class="col-12 col-md-5 col-lg-6 section-info__img">
+							<picture><source srcset="img/preview-base.webp, img/preview-base@2x.webp 2x" type="image/webp"><img class="is-lg-visible" src="img/preview-base.png" srcset="img/preview-base@2x.png 2x" alt=""></picture>
+							<picture><source srcset="img/preview-base_mob.webp" type="image/webp"><img class="is-lg-hidden" src="img/preview-base_mob.png" alt=""></picture>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="promo">
+					<div class="promo__back"></div>
+					<div class="promo__container">
+						<div class="promo__heading">Вы уже подключены к другой CRM?</div>
+						<div class="promo__subheading">Мы поможем перенести данные!</div>
+						<div class="promo__btns-wrap">
+							<div class="promo__btns">
+								<a class="btn btn-base" href="#">Регистрация</a>
+								<a class="btn btn-outline btn-outline--theme-white" href="#">Пробный парсер</a>
+								<img class="promo__btns-arrow" src="img/icon-arrow-promo.svg" width="45" height="62" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-info" id="applications">
+				<div class="container">
+					<div class="row section-info__row">
+						<div class="col-12 col-md-7 col-lg-6">
+							<div class="heading-medium">Заявки<br> клиентов</div>
+							<ul class="info-list row">
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-add-file">
+											<use xlink:href="img/icons/icons.svg#icon-add-file"></use>
+										</svg>
+									</div>Сохранение поиска под клиента
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-upload-file">
+											<use xlink:href="img/icons/icons.svg#icon-upload-file"></use>
+										</svg>
+									</div>Подборка из “Моя база”
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-pagers">
+											<use xlink:href="img/icons/icons.svg#icon-pagers"></use>
+										</svg>
+									</div>Подборкаиз “Парсер”
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-waves">
+											<use xlink:href="img/icons/icons.svg#icon-waves"></use>
+										</svg>
+									</div>Сортировка объектов в Подборке
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-duplicate">
+											<use xlink:href="img/icons/icons.svg#icon-duplicate"></use>
+										</svg>
+									</div>Счетчик  объектов по Подборке
+								</li>
+								<li class="info-list__item col-6 col-xl-4">
+									<div class="info-list__item-icon">
+										<svg class="icon-file-search">
+											<use xlink:href="img/icons/icons.svg#icon-file-search"></use>
+										</svg>
+									</div>Быстрый переходв мессенджеры
+								</li>
+							</ul>
+						</div>
+						<div class="col-12 col-md-5 col-lg-6 section-info__img">
+							<picture><source srcset="img/preview-applications.webp, img/preview-applications@2x.webp 2x" type="image/webp"><img class="is-lg-visible" src="img/preview-applications.png" srcset="img/preview-applications@2x.png 2x" alt=""></picture>
+							<picture><source srcset="img/preview-applications_mob.webp" type="image/webp"><img class="is-lg-hidden" src="img/preview-applications_mob.png" alt=""></picture>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="compatibility">
+					<div class="compatibility__back"></div>
+					<div class="compatibility__container">
+						<div class="row">
+							<div class="col-12 col-lg-6 compatibility__main">
+								<div class="compatibility__heading">Полная мобильная совместимость, CRM для недвижимости доступна с любого устройства!</div>
+								<div>
+									<a class="btn btn-base" href="#">Регистрация</a>
+								</div>
+							</div>
+							<div class="col-12 col-lg-6 compatibility__img">
+								<img class="is-lg-visible" src="img/iPhone-15-Pro 1.png" alt="">
+								<picture><source srcset="img/iPhone-15-Pro_mob.webp" type="image/webp"><img class="is-lg-hidden" src="img/iPhone-15-Pro_mob.png" alt=""></picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container plans" id="plans">
+				<div class="heading-base">Тарифы Миксби:</div>
+				<div class="swiper plans-items">
+					<div class="plans-wrapper swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="plan">
+								<div class="plan__price">
+									<div>
+										<div class="plan__price-heading">
+											<span>1 000 </span> ₽/мес.
+										</div>
+										<div>за пользователя</div>
+									</div>
+									<div class="plan__price-icon">
+										<svg class="icon-add-user">
+											<use xlink:href="img/icons/icons.svg#icon-add-user"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="plan__section">
+									<div class="plan__heading">Парсер:</div>
+									<ul class="plan__list">
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Просмотр контактов
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Сортировка объявлений 
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Сортировка пользователей 
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Заметки к объявлениям
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Предложения по адресу
+										</li>
+									</ul>
+								</div>
+								<div class="plan__section">
+									<div class="plan__heading">Моя База:</div>
+									<ul class="plan__list">
+										<li>
+											<svg class="icon-cross">
+												<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+											</svg>Добавление объекта
+										</li>
+										<li>
+											<svg class="icon-cross">
+												<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+											</svg>Выгрузка объектов
+										</li>
+										<li>
+											<svg class="icon-cross">
+												<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+											</svg>Счетчики выгрузки
+										</li>
+										<li>
+											<svg class="icon-cross">
+												<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+											</svg>Дублирование объекта
+										</li>
+										<li>
+											<svg class="icon-cross">
+												<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+											</svg>Водяной знак
+										</li>
+									</ul>
+								</div>
+								<div class="plan__section">
+									<div class="plan__heading">Заявки:</div>
+									<ul class="plan__list">
+										<li>
+											<svg class="icon-cross">
+												<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+											</svg>Подборка из “Моя база”
+										</li>
+										<li>
+											<svg class="icon-cross">
+												<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+											</svg>Подборка из “Парсер”
+										</li>
+										<li>
+											<svg class="icon-cross">
+												<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+											</svg>Сортировка объектов
+										</li>
+										<li>
+											<svg class="icon-cross">
+												<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+											</svg>Счетчик объектов
+										</li>
+										<li>
+											<svg class="icon-cross">
+												<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+											</svg>Переход в мессенежеры
+										</li>
+									</ul>
+								</div>
+								<div>
+									<a class="btn btn-base btn--fullwidth" href="#">Попробовать</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="plan plan--selected">
+								<div class="plan__price">
+									<div>
+										<div class="plan__price-heading">
+											<span>5 000 </span> ₽/мес.
+										</div>
+										<div>за пользователя</div>
+									</div>
+									<div class="plan__price-icon">
+										<svg class="icon-add-user">
+											<use xlink:href="img/icons/icons.svg#icon-add-user"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="plan__section">
+									<div class="plan__heading">Парсер:</div>
+									<ul class="plan__list">
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Просмотр контактов
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Сортировка объявлений 
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Сортировка пользователей 
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Заметки к объявлениям
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Предложения по адресу
+										</li>
+									</ul>
+								</div>
+								<div class="plan__section">
+									<div class="plan__heading">Моя База:</div>
+									<ul class="plan__list">
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Добавление объекта
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Выгрузка объектов
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Счетчики выгрузки
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Дублирование объекта
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Водяной знак
+										</li>
+									</ul>
+								</div>
+								<div class="plan__section">
+									<div class="plan__heading">Заявки:</div>
+									<ul class="plan__list">
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Подборка из “Моя база”
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Подборка из “Парсер”
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Сортировка объектов
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Счетчик объектов
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Переход в мессенежеры
+										</li>
+									</ul>
+								</div>
+								<div class="plan__section">
+									<div class="plan__heading">Собственники:
+										<img src="img/icon-fire.svg" width="20" height="20" alt="">
+										<img src="img/icon-fire.svg" width="20" height="20" alt="">
+										<img src="img/icon-fire.svg" width="20" height="20" alt="">
+									</div>
+									<ul class="plan__list">
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Просмотр контактов
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Актуальные объявления
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Трекинг актуализации
+										</li>
+									</ul>
+								</div>
+								<div>
+									<a class="btn btn-base btn--fullwidth" href="#">Попробовать</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="plan">
+								<div class="plan__price">
+									<div>
+										<div class="plan__price-heading">
+											<span>2 000 </span> ₽/мес.
+										</div>
+										<div>за пользователя</div>
+									</div>
+									<div class="plan__price-icon">
+										<svg class="icon-add-user">
+											<use xlink:href="img/icons/icons.svg#icon-add-user"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="plan__section">
+									<div class="plan__heading">Парсер:</div>
+									<ul class="plan__list">
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Просмотр контактов
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Сортировка объявлений 
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Сортировка пользователей 
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Заметки к объявлениям
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Предложения по адресу
+										</li>
+									</ul>
+								</div>
+								<div class="plan__section">
+									<div class="plan__heading">Моя База:</div>
+									<ul class="plan__list">
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Добавление объекта
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Выгрузка объектов
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Счетчики выгрузки
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Дублирование объекта
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Водяной знак
+										</li>
+									</ul>
+								</div>
+								<div class="plan__section">
+									<div class="plan__heading">Заявки:</div>
+									<ul class="plan__list">
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Подборка из “Моя база”
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Подборка из “Парсер”
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Сортировка объектов
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Счетчик объектов
+										</li>
+										<li>
+											<svg class="icon-check">
+												<use xlink:href="img/icons/icons.svg#icon-check"></use>
+											</svg>Переход в мессенежеры
+										</li>
+									</ul>
+								</div>
+								<div>
+									<a class="btn btn-base btn--fullwidth" href="#">Попробовать</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="plans-pagination"></div>
+				</div>
+			</div>
+			<div class="container video-section">
+				<div class="video">
+					<div class="heading-normal">Видеопрезентация</div>
+					<div class="video__main">
+						<iframe src="https://www.youtube.com/embed/Uh9643c2P6k?si=bRZghYa5-WtiBUu-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="video-btns-wrap">
+					<div class="video-btns">
+						<a class="btn btn-base" href="#">Регистрация</a>
+						<a class="btn btn-outline btn-outline--theme-red" href="#">Пробный парсер</a>
+					</div>
+				</div>
+			</div>
+			<footer class="footer" id="contacts">
+				<div class="container">
+					<div class="row footer__row">
+						<div class="col-12 col-lg-4 footer__col-logo">
+							<div class="footer__logo">
+								<img src="img/logo.svg" width="95" height="27" alt="">
+								<span>CRM</span>
+							</div>
+							<div class="footer__logo-text">Миксби црм недвижимость © 						</div>
+						</div>
+						<div class="col-12 col-lg-4 footer__col-links">
+							<ul class="footer__links">
+								<li>
+									<a href="#">Пользовательское соглашение</a>
+								</li>
+								<li>
+									<a href="#">Политика конфиденциальности</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-12 col-lg-4 footer__col-contacts">
+							<div>
+								<a class="contact-item" href="tel:+7 (999) 999 99 99">
+									 +7 (999) 999 99 99
+									<div class="contact-item__icon">
+										<svg class="icon-tel">
+											<use xlink:href="img/icons/icons.svg#icon-tel"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+							<div>
+								<a class="contact-item" href="#">username
+									<div class="contact-item__icon">
+										<img src="img/icon-telegram.svg" width="36" height="36" alt="">
+									</div>
+								</a>
+							</div>
+							<div>
+								<a class="contact-email" href="mailto:info@mixbe.ru">info@mixbe.ru</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="js/app.min.js?_v=20240208203111"></script>
+	</body>
+</html>

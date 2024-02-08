@@ -1,0 +1,125 @@
+.btn {
+	cursor: pointer;
+	text-decoration: none;
+	background: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transition: all .25s;
+	max-width: 100%;
+	outline: none;
+	&:hover {
+		text-decoration: none;
+	}
+	&:active {
+		transition: none;
+	}
+
+	&-auth {
+		height: 46px;
+		border: 1px solid var(--color-red);
+		border-radius: 8px;
+		padding: 10px 22px;
+		font-size: 16px;
+		font-weight: 700;
+		color: var(--color-red);
+		&:hover {
+			background: var(--color-red);
+			color:  var(--color-white);
+		}
+	}
+
+	&-base {
+		height: 56px;
+		min-width: 228px;
+		background: var(--color-red);
+		color: var(--color-white);
+		font-size: 16px;
+		font-weight: 600;
+		border-radius: 8px;
+		&:hover {
+			background: #bf3423;
+		}
+	}
+
+	&-outline {
+		height: 56px;
+		min-width: 260px;
+		border-radius: 8px;
+		padding: 10px 22px;
+		font-size: 16px;
+		font-weight: 700;
+		&--theme-white {
+			border: 1px solid var(--color-white);
+			color: var(--color-white);
+			&:hover {
+				background: var(--color-white);
+				color:  var(--color-red);
+			}
+		}
+		&--theme-red {
+			border: 1px solid var(--color-red);
+			color: var(--color-red);
+			&:hover {
+				background: var(--color-red);
+				color:  var(--color-white);
+			}
+		}
+	}
+
+	&-menu {
+		position: relative;
+		width: 38px;
+		height: 38px;
+		z-index: 205;
+		border: 2px solid var(--color-red);
+		border-radius: 100%;
+		& span,
+		&:before,
+		&:after{
+			content: "";
+			display: block;
+			width: 18px;
+			height: 2px;
+			background-color: var(--color-red);
+			position: absolute;
+			transition: .5;
+		}
+
+		&:before{
+			top: 10px;
+			transition: all .2s;
+		}
+		& span{
+			top: 16px;
+			transition: all .2s;
+		}
+		&:after{
+			top: 22px;
+			transition: all .2s;
+		}
+
+		&.active {
+			span {
+				opacity:0;
+			}
+			&:before {
+				transform: rotate(45deg);
+				transform-origin: center;
+				top: 16px;
+			}
+			&:after {
+				top: 16px;
+				transform: rotate(-45deg);
+				transform-origin: center;
+			}
+		}
+	}
+
+	&--fullwidth {
+		width: 100%;
+	}
+
+	
+}

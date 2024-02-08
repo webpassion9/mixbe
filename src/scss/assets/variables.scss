@@ -1,0 +1,22 @@
+// fonts
+$fontBase: OpenSans, Arial, sans-serif;
+
+// colors
+:root {
+	--color-white: #FFFFFF;
+	--color-black: #000000;
+	--color-red: #D44C3B;
+	--color-body-bg: #F4F5F9;
+	--color-dark-gray: #4A4A69;
+	--color-blue: #356ABA;
+}
+
+// breakpoints
+$xs: 320px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$hd: 1600px;
+

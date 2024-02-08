@@ -1,0 +1,53 @@
+.is-error {
+    border-color: red;
+}
+
+.is-success {
+    border-color: green;
+}
+
+// -----
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	-webkit-appearance: none;
+	border-radius: 0;
+	background-color: transparent;
+}
+
+button {
+	cursor: pointer;
+	border: 0;
+	outline: none;
+}
+
+
+input {
+	vertical-align: middle;
+	outline: none;
+	border: 0;
+	&[type="submit"], &[type="button"] {
+		cursor: pointer;
+		-webkit-appearance: none;
+	}
+}
+
+textarea {
+	outline: none;
+	resize: none;
+	overflow: auto;
+}
+
+:invalid {
+	box-shadow: none;
+}
+
+.ui-input {
+	display: block;
+	width: 100%;
+	font-family: $fontBase;
+	-webkit-appearance: none;
+	transition: .25s;
+}

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-icon-add-file-dims { width: 22px; height: 26px; }
+ .svg-icon-add-user-dims { width: 31px; height: 35px; }
+ .svg-icon-arrow-down-dims { width: 26px; height: 26px; }
+ .svg-icon-bar-chart-dims { width: 26px; height: 22px; }
+ .svg-icon-business-card-dims { width: 26px; height: 18px; }
+ .svg-icon-chat-dims { width: 26px; height: 26px; }
+ .svg-icon-check-dims { width: 16px; height: 12px; }
+ .svg-icon-check-elem-dims { width: 26px; height: 26px; }
+ .svg-icon-circle-cross-dims { width: 38px; height: 38px; }
+ .svg-icon-circle-menu-dims { width: 38px; height: 38px; }
+ .svg-icon-compass-dims { width: 26px; height: 26px; }
+ .svg-icon-contact-dims { width: 26px; height: 26px; }
+ .svg-icon-cross-dims { width: 14px; height: 15px; }
+ .svg-icon-duplicate-dims { width: 26px; height: 26px; }
+ .svg-icon-energy-dims { width: 22px; height: 26px; }
+ .svg-icon-file-search-dims { width: 22px; height: 26px; }
+ .svg-icon-find-user2-dims { width: 26px; height: 26px; }
+ .svg-icon-find-website-dims { width: 26px; height: 26px; }
+ .svg-icon-fire-dims { width: 20px; height: 21px; }
+ .svg-icon-location-dims { width: 26px; height: 22px; }
+ .svg-icon-pagers-dims { width: 26px; height: 22px; }
+ .svg-icon-play-dims { width: 12px; height: 15px; }
+ .svg-icon-stock-chart-dims { width: 26px; height: 26px; }
+ .svg-icon-tel-dims { width: 128px; height: 128px; }
+ .svg-icon-upload-file-dims { width: 22px; height: 26px; }
+ .svg-icon-waves-dims { width: 26px; height: 22px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="icon-add-file">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-add-file" class="svg-icon-add-file-dims" alt="icon-add-file">
+                    </div>
+                    <h2>icon-add-file, </h2>
+                </li>
+             <li title="icon-add-user">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-add-user" class="svg-icon-add-user-dims" alt="icon-add-user">
+                    </div>
+                    <h2>icon-add-user, </h2>
+                </li>
+             <li title="icon-arrow-down">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-arrow-down" class="svg-icon-arrow-down-dims" alt="icon-arrow-down">
+                    </div>
+                    <h2>icon-arrow-down, </h2>
+                </li>
+             <li title="icon-bar-chart">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-bar-chart" class="svg-icon-bar-chart-dims" alt="icon-bar-chart">
+                    </div>
+                    <h2>icon-bar-chart, </h2>
+                </li>
+             <li title="icon-business-card">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-business-card" class="svg-icon-business-card-dims" alt="icon-business-card">
+                    </div>
+                    <h2>icon-business-card, </h2>
+                </li>
+             <li title="icon-chat">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-chat" class="svg-icon-chat-dims" alt="icon-chat">
+                    </div>
+                    <h2>icon-chat, </h2>
+                </li>
+             <li title="icon-check">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-check" class="svg-icon-check-dims" alt="icon-check">
+                    </div>
+                    <h2>icon-check, </h2>
+                </li>
+             <li title="icon-check-elem">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-check-elem" class="svg-icon-check-elem-dims" alt="icon-check-elem">
+                    </div>
+                    <h2>icon-check-elem, </h2>
+                </li>
+             <li title="icon-circle-cross">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-circle-cross" class="svg-icon-circle-cross-dims" alt="icon-circle-cross">
+                    </div>
+                    <h2>icon-circle-cross, </h2>
+                </li>
+             <li title="icon-circle-menu">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-circle-menu" class="svg-icon-circle-menu-dims" alt="icon-circle-menu">
+                    </div>
+                    <h2>icon-circle-menu, </h2>
+                </li>
+             <li title="icon-compass">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-compass" class="svg-icon-compass-dims" alt="icon-compass">
+                    </div>
+                    <h2>icon-compass, </h2>
+                </li>
+             <li title="icon-contact">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-contact" class="svg-icon-contact-dims" alt="icon-contact">
+                    </div>
+                    <h2>icon-contact, </h2>
+                </li>
+             <li title="icon-cross">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-cross" class="svg-icon-cross-dims" alt="icon-cross">
+                    </div>
+                    <h2>icon-cross, </h2>
+                </li>
+             <li title="icon-duplicate">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-duplicate" class="svg-icon-duplicate-dims" alt="icon-duplicate">
+                    </div>
+                    <h2>icon-duplicate, </h2>
+                </li>
+             <li title="icon-energy">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-energy" class="svg-icon-energy-dims" alt="icon-energy">
+                    </div>
+                    <h2>icon-energy, </h2>
+                </li>
+             <li title="icon-file-search">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-file-search" class="svg-icon-file-search-dims" alt="icon-file-search">
+                    </div>
+                    <h2>icon-file-search, </h2>
+                </li>
+             <li title="icon-find-user2">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-find-user2" class="svg-icon-find-user2-dims" alt="icon-find-user2">
+                    </div>
+                    <h2>icon-find-user2, </h2>
+                </li>
+             <li title="icon-find-website">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-find-website" class="svg-icon-find-website-dims" alt="icon-find-website">
+                    </div>
+                    <h2>icon-find-website, </h2>
+                </li>
+             <li title="icon-fire">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-fire" class="svg-icon-fire-dims" alt="icon-fire">
+                    </div>
+                    <h2>icon-fire, </h2>
+                </li>
+             <li title="icon-location">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-location" class="svg-icon-location-dims" alt="icon-location">
+                    </div>
+                    <h2>icon-location, </h2>
+                </li>
+             <li title="icon-pagers">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-pagers" class="svg-icon-pagers-dims" alt="icon-pagers">
+                    </div>
+                    <h2>icon-pagers, </h2>
+                </li>
+             <li title="icon-play">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-play" class="svg-icon-play-dims" alt="icon-play">
+                    </div>
+                    <h2>icon-play, </h2>
+                </li>
+             <li title="icon-stock-chart">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-stock-chart" class="svg-icon-stock-chart-dims" alt="icon-stock-chart">
+                    </div>
+                    <h2>icon-stock-chart, </h2>
+                </li>
+             <li title="icon-tel">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-tel" class="svg-icon-tel-dims" alt="icon-tel">
+                    </div>
+                    <h2>icon-tel, </h2>
+                </li>
+             <li title="icon-upload-file">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-upload-file" class="svg-icon-upload-file-dims" alt="icon-upload-file">
+                    </div>
+                    <h2>icon-upload-file, </h2>
+                </li>
+             <li title="icon-waves">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-waves" class="svg-icon-waves-dims" alt="icon-waves">
+                    </div>
+                    <h2>icon-waves, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Thu, 08 Feb 2024 17:31:10 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>
